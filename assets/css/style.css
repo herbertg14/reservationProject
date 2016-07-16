@@ -16,10 +16,20 @@ nav .brand-logo {
 	font-size: 72px;
 }
 
-.row {
+.promo{
 	margin-top: 40px;
 }
 
 footer.page-footer {
 	padding-top: 0;
+}
+
+.caption {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-size: 24px;
+}
+
+.row {
+	margin-bottom: 0;
 }
