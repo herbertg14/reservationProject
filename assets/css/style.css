@@ -1,3 +1,35 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 nav .brand-logo {
 	padding-left: 15px;
+}
+
+.material-icons {
+	font-size: 72px;
+}
+
+.promo{
+	margin-top: 40px;
+}
+
+footer.page-footer {
+	padding-top: 0;
+}
+
+.caption {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-size: 24px;
+}
+
+.row {
+	margin-bottom: 0;
 }

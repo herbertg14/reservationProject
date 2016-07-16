@@ -4,18 +4,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>The Best Reservation</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">The Best Reservation!</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">View Tables</a></li>
-        <li><a href="badges.html">Make A Reservation</a></li>
-      </ul>
+  <header>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">The Best Reservation!</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/table">View Tables</a></li>
+          <li><a href="/reserve">Make A Reservation</a></li>
+        </ul>
+      </div>
+  	</nav>
+  </div>
+  </header>
+  <main>
+  <div class="container">
+    <div class="row promo">
+      <div class="col s4">
+        <div class="center">
+          <i class="material-icons">add_alert</i>
+          <p class="caption">Create A Reservation</p>
+          <p class="light center">With The Best Reservation! customers are able to create reservations to your restaurant.</p>
+          <a href="/reserve" class="waves-effect waves-light btn">Add Reservation</a>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="center">
+          <i class="material-icons">group</i>
+          <p class="caption">View Tables</p>
+          <p class="light center">With The Best Reservation! you can easily check where each of your reservations is in your queue.</p>
+          <a href="/table" class="waves-effect waves-light btn">View Table Queue</a>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="center">
+          <i class="material-icons">settings</i>
+          <p class="caption">Clear your reservations</p>
+          <p class="light center">The Best Reservation! allows you to easily clear out all your reservations with just a click of a button.</p>
+        </div>
+      </div>
     </div>
-	</nav>
+  </div>
+  </main>
+  <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">The Best Reservation!</h5>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="/api/tables">View API Table</a></li>
+          <li><a class="grey-text text-lighten-3" href="/api/waitlist">View API Waitlist</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2016 Copyright
+    <a class="grey-text text-lighten-4 right" href="https://github.com/herbertg14/reservationProject">github</a>
+    </div>
+  </div>
+</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 </body>
