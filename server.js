@@ -14,15 +14,15 @@ app.use(express.static('assets'));
 var reservations = [
 	{
 		routeName:"Steve boy",
-		phone: "",
-		email: "" , 
-		uniqueID: "" 
+		phone: "512-111-1111",
+		email: "steve@hotmail.com" , 
+		uniqueID: 10 
 	},
 	{
-		routeName:"steve",
-		phone: "",
-		email: "" , 
-		uniqueID: "" 
+		routeName:"Ash",
+		phone: "512-101-1010",
+		email: "ash@pokemon.com" , 
+		uniqueID: 1 
 	} 
 ];
 
