@@ -13,8 +13,9 @@ $('document').ready(function(){
 			email: email,
 			unique_id: unique_id
 		}
+		console.log(theObject);
 		return theObject;
-	});
+	});//end theButton.click
 
 
 
