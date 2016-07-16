@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reservations</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">	
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>      
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="navbar-fixed">
+    <!-- <div class="nav-wrapper" > -->
+      <a href="home.html" class="brand-logo">The Best Reservation!</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- <li><a href="home.html">Home</a></li> -->
+        <li><a href="tables.html">View Tables</a></li>
+        <li><a href="reserve.html">Make a Reservation</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+  <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Name" id="name" type="text" class="validate">
+            <label for="first_name"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Phone Number" id="phone" type="text" class="validate">
+            <label for="first_name"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Email" id="email" type="text" class="validate">
+            <label for="first_name"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Unique ID" id="unique_id" type="text" class="validate">
+            <label for="call_name"></label>
+          </div>
+        </div>
+      </form>
+  </div>
+          
+
+
+
+	<script type="text/javascript">
+		
+		$('#searchBtn').on("click", function(){
+
+			var searchedCharacter = $("#characterSearch").val().trim();
+
+			searchedCharacter = searchedCharacter.replace(/\s+/g, '').toLowerCase();
+			
+			$.get( "http://localhost:3000/api/" + searchedCharacter, function( data ) {
+
+				console.log(data);
+				if(data == false){
+					$("#name").text("The force is not strong with this one. Your character was not found. ");
+					$("#stats").hide();
+				}
+				else {
+					$("#stats").show();
+					$("#name").text(data.name);
+					$("#role").text(data.role);
+					$("#age").text(data.age);
+					$("#forcePoints").text(data.forcePoints);					
+				}
+
+			});
+
+		});	
+
+	</script>
+
+</body>
+</html>
