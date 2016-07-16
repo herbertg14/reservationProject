@@ -14,15 +14,15 @@ app.use(express.static('assets'));
 var reservations = [
 	{
 		routeName:"Steve boy",
-		phone: "",
-		email: "" , 
-		uniqueID: "" 
+		phone: "512-111-1111",
+		email: "steve@hotmail.com" , 
+		uniqueID: 10 
 	},
 	{
-		routeName:"steve",
-		phone: "",
-		email: "" , 
-		uniqueID: "" 
+		routeName:"Ash",
+		phone: "512-101-1010",
+		email: "ash@pokemon.com" , 
+		uniqueID: 1 
 	} 
 ];
 
@@ -38,6 +38,14 @@ app.get("/api/tables", function(request, results){
 
 app.get("/api/waitlist", function(request,results){
 	results.json(waitlist);
+})
+
+app.get("/table", function(request, results){
+	results.sendFile(path.join(__dirname, "table.html"));
+})
+
+app.get("/reserve", function(request, results){
+	results.sendFile(path.join(__dirname, "reserve.html"));
 })
 
 app.get("/api/:reservations?", function(request, results){
