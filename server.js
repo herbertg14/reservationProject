@@ -40,6 +40,14 @@ app.get("/api/waitlist", function(request,results){
 	results.json(waitlist);
 })
 
+app.get("/table", function(request, results){
+	results.sendFile(path.join(__dirname, "table.html"));
+})
+
+app.get("/reserve", function(request, results){
+	results.sendFile(path.join(__dirname, "reserve.html"));
+})
+
 app.get("/api/:reservations?", function(request, results){
 	var reservation = request.params.reservations;
 
