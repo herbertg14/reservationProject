@@ -16,7 +16,4 @@ $('document').ready(function(){
 		console.log(theObject);
 		return theObject;
 	});//end theButton.click
-
-
-
 });//end document.ready
